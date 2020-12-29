@@ -34,17 +34,17 @@ def predict():
     result = {
         'mpg_prediction': list(predictions)
     }
-    return jsonify(result)
+    return jsonify(result['mpg_prediction'])
 
 @app.route('/ping', methods=['GET'])
 def ping():
     return "Pinging Model!!"
 
 
-# @app.route('/sanket', methods=['GET'])
-# def test():
-#     return 'Pinging Model Application!!'
+@app.route('/sanket', methods=['GET'])
+def test():
+    return 'Pinging Model Application UAE!!'
 
 
-# if __name__ == '__main__':
-#     # app.run(debug=True, host='127.0.0.1', port=5001)  #use this port and ip for local server check
+if __name__ == '__main__':
+    app.run(debug=True, host='127.0.0.1', port=5001)  #use this port and ip for local server check
